@@ -1,17 +1,31 @@
-# Node modules
+# DDEV local environment
+.ddev/
+
+# Drupal core
+/core
+/modules/contrib
+/themes/contrib
+/profiles/contrib
+/libraries
+
+# Vendor directory (managed by composer)
+/vendor
+
+# Sites default files
+/web/sites/*/files
+/web/sites/*/private
+
+# Environment-specific settings
+/web/sites/*/settings.local.php
+/web/sites/*/services.local.yml
+
+# Development files
+*.md
+/recipes
+
+# Node modules if any
 node_modules/
 
-# npm
-package-lock.json
-
-# Drupal files
-web/sites/*/files/
-web/sites/*/private/
-
-# IDE
+# Other
+.DS_Store
 .idea/
-.vscode/
-*.swp
-*.swo
-*~
-
