@@ -1,0 +1,22 @@
+uuid: 58be3623-add3-49c7-868c-dd196059710d
+langcode: el
+status: true
+dependencies:
+  module:
+    - image_effects
+name: teaser_item_frontpage
+label: 'Teaser Item Frontpage'
+effects:
+  c5afb71b-26c5-4983-98e0-2c3893942372:
+    uuid: c5afb71b-26c5-4983-98e0-2c3893942372
+    id: image_effects_strip_metadata
+    weight: 2
+    data: {  }
+  26b788e0-0484-4e3e-838d-e39590fd3804:
+    uuid: 26b788e0-0484-4e3e-838d-e39590fd3804
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 425
+      height: 250
+      anchor: center-center

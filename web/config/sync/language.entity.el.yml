@@ -1,0 +1,9 @@
+uuid: 147346d4-66b5-4824-b801-8e5fac0092a3
+langcode: el
+status: true
+dependencies: {  }
+id: el
+label: Ελληνικά
+direction: ltr
+weight: 0
+locked: false

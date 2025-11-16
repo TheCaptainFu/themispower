@@ -1,0 +1,13 @@
+uuid: ea2751ff-1b1c-4db3-80b6-4f37bd98bfdf
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: JBptjnfuOMtsdKygklXxoOgeOCTMtQxlkymjnnj-cC0
+id: node_unpromote_action
+label: 'Αφαίρεση περιεχομένου από την αρχική σελίδα'
+type: node
+plugin: node_unpromote_action
+configuration: {  }

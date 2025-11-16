@@ -1,0 +1,18 @@
+uuid: 8e253c6b-5816-40f4-977e-0a79377c8f92
+langcode: el
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Προιόν
+type: proion
+description: 'Σε αυτό τον τύπο περιεχομένου δημιουργούμε ένα αντικείμενο για την ιστοσελίδα μας.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

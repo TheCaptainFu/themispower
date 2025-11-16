@@ -1,0 +1,11 @@
+uuid: 9b51b4a5-ed62-4b81-8571-4c7168ba0939
+langcode: el
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OeKGIkmZA_c-t6QLH81WNQx8gDCc1MRmxaTuQgxBByU
+id: administrator
+label: Διαχειριστής
+weight: 3
+is_admin: true
+permissions: {  }

@@ -1,0 +1,22 @@
+uuid: f62d8d70-11c0-40cf-af3d-0eab79393c04
+langcode: el
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gg
+_core:
+  default_config_hash: a0Yyx1GeyKarZ4T_yXQBR_ZFKnXiFLtxAb6gWLd8nr0
+id: gg_content
+theme: gg
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Περιεχόμενο κεντρικής σελίδας'
+  label_display: '0'
+  provider: system
+visibility: {  }

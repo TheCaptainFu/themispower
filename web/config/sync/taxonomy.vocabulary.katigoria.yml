@@ -1,0 +1,9 @@
+uuid: d441342f-9fb7-4210-a1e6-62794e9b6d6b
+langcode: el
+status: true
+dependencies: {  }
+name: Κατηγορία
+vid: katigoria
+description: 'Κατηγορίες για τα προιόντα μας'
+weight: 0
+new_revision: false

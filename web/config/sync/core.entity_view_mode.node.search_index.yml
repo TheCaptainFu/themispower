@@ -1,0 +1,13 @@
+uuid: 20d76323-737f-474f-8444-ca8fc1a8b901
+langcode: el
+status: false
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: r_A0T3aTqGDwLyvoH7wLps-0PM--RHlS8UsiJe_Ac64
+id: node.search_index
+label: 'Ευρετήριο αναζήτησης'
+description: ''
+targetEntityType: node
+cache: true

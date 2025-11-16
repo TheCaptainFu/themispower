@@ -1,0 +1,22 @@
+uuid: 0505f8f1-9897-4a4b-a0eb-ad48b2b0fa9a
+langcode: el
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olivero
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: olivero_content
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Περιεχόμενο κεντρικής σελίδας'
+  label_display: '0'
+  provider: system
+visibility: {  }

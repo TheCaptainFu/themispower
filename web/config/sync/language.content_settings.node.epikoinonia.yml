@@ -1,0 +1,11 @@
+uuid: 59101bbe-0b43-49f5-906b-23e87c259128
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.epikoinonia
+id: node.epikoinonia
+target_entity_type_id: node
+target_bundle: epikoinonia
+default_langcode: site_default
+language_alterable: false

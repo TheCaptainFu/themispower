@@ -1,0 +1,14 @@
+uuid: dbcd1fd2-ffb6-4b33-93eb-14a5dc23ff70
+langcode: el
+status: true
+dependencies:
+  module:
+    - help
+_core:
+  default_config_hash: RZ-bcSekNSsAbIPLW7Gmyd3uUjIOSrPvnb8RCCZYJm8
+id: help_search
+label: Βοήθεια
+path: help
+weight: 0
+plugin: help_search
+configuration: {  }

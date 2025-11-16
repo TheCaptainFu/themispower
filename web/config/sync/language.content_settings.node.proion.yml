@@ -1,0 +1,11 @@
+uuid: 8c388fd0-fc7a-4bb2-8f6d-7406b730f93d
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.proion
+id: node.proion
+target_entity_type_id: node
+target_bundle: proion
+default_langcode: site_default
+language_alterable: false

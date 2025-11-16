@@ -1,0 +1,22 @@
+uuid: b5bf90ed-c501-42c2-bc41-2c07d1ad4cc4
+langcode: el
+status: true
+dependencies:
+  theme:
+    - gg
+_core:
+  default_config_hash: 2L0geP-ixCbCkEpW6BVF6H7vDUZN4ea07_Y9CociQm4
+id: gg_secondary_local_tasks
+theme: gg
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Δευτερεύουσες καρτέλες'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

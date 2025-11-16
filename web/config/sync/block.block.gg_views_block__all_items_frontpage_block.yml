@@ -1,0 +1,29 @@
+uuid: 97a8137b-693f-402b-b786-1d9ac8fccdb4
+langcode: el
+status: true
+dependencies:
+  config:
+    - views.view.all_items
+  module:
+    - system
+    - views
+  theme:
+    - gg
+id: gg_views_block__all_items_frontpage_block
+theme: gg
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:all_items-frontpage_block'
+settings:
+  id: 'views_block:all_items-frontpage_block'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

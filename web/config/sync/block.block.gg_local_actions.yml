@@ -1,0 +1,20 @@
+uuid: 69e0eaaa-da72-4a6d-8a0c-d9699c46404c
+langcode: el
+status: true
+dependencies:
+  theme:
+    - gg
+_core:
+  default_config_hash: CdXfDmRgAvms7EQovxxWPdYi0GitxeRbVtScYK16ZH0
+id: gg_local_actions
+theme: gg
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Πρωτεύουσες ενέργειες διαχείρισης'
+  label_display: '0'
+  provider: core
+visibility: {  }

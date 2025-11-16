@@ -1,0 +1,11 @@
+uuid: c83abfa8-b489-4904-a3de-b383cba2e78f
+langcode: el
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.katigoria
+id: taxonomy_term.katigoria
+target_entity_type_id: taxonomy_term
+target_bundle: katigoria
+default_langcode: site_default
+language_alterable: false

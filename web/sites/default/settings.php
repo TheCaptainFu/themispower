@@ -859,7 +859,7 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_F1g7o20GhALTcwtFxLbBRR5aeIUTe55swm_ro1un-g8DDEdV86IPngzsv_FW_7bu3KXSxFSmew/sync';
+$settings['config_sync_directory'] = $app_root . '/config/sync';
 
 // Automatically generated include for settings managed by ddev.
 $ddev_settings = __DIR__ . '/settings.ddev.php';

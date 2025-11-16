@@ -1,0 +1,10 @@
+uuid: 05f0ece3-1645-48fa-8e6f-aeca37d96446
+langcode: el
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
+id: main
+label: 'Κεντρική πλοήγηση'
+description: 'Site section links'
+locked: true

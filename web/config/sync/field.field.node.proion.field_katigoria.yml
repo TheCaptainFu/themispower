@@ -1,0 +1,29 @@
+uuid: b61788d7-ad24-4fab-908e-609269ab4e7e
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_katigoria
+    - node.type.proion
+    - taxonomy.vocabulary.katigoria
+id: node.proion.field_katigoria
+field_name: field_katigoria
+entity_type: node
+bundle: proion
+label: Κατηγορία
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      katigoria: katigoria
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

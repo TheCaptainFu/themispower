@@ -1,0 +1,22 @@
+uuid: 4351bae1-7846-478c-844a-0a33f18b455b
+langcode: el
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - gg
+_core:
+  default_config_hash: jccFSSVqV0WCDb6NtML1VWAWTtDbZ-zn5YgTRMgMrIM
+id: gg_help
+theme: gg
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Βοήθεια
+  label_display: '0'
+  provider: help
+visibility: {  }

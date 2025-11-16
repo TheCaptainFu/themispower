@@ -1,0 +1,49 @@
+uuid: 292ab22f-fcd6-47a6-be52-084cf57b8b12
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.proion.field_eikones
+    - field.field.node.proion.field_katigoria
+    - field.field.node.proion.field_perigrafi
+    - node.type.proion
+  module:
+    - text
+    - user
+id: node.proion.full
+targetEntityType: node
+bundle: proion
+mode: full
+content:
+  field_eikones:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_katigoria:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_perigrafi:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

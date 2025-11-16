@@ -1,0 +1,32 @@
+uuid: d7a878f9-e024-4da8-b7e8-70cb7d228501
+langcode: el
+status: true
+dependencies:
+  config:
+    - block_content.type.test
+    - field.field.block_content.test.body
+    - field.field.block_content.test.field_title
+  module:
+    - text
+id: block_content.test.default
+targetEntityType: block_content
+bundle: test
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

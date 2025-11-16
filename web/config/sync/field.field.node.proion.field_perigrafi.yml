@@ -1,0 +1,24 @@
+uuid: cf1854b6-274e-4c86-9da0-e8b7fb4973ef
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_perigrafi
+    - filter.format.full_html
+    - node.type.proion
+  module:
+    - text
+id: node.proion.field_perigrafi
+field_name: field_perigrafi
+entity_type: node
+bundle: proion
+label: Περιγραφή
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

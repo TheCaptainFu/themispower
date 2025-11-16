@@ -1,0 +1,8 @@
+uuid: 162cbe17-8b2e-4077-8da4-f16ac34c6962
+langcode: el
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: U5VlGjd_SfV0Qm_EfnaynOfc549cNscFAx48JfYoMRI
+id: default
+label: Προεπιλεγμένο

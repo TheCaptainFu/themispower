@@ -1,0 +1,32 @@
+uuid: 04fbbbd3-49bf-4d37-8699-c5fc5f8c7232
+langcode: el
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - gg
+  enforced:
+    config:
+      - search.page.help_search
+_core:
+  default_config_hash: 2ToeZLvlHKTeFY74gpgu1PejLoFyCECLO_gw6rAZwqw
+id: gg_help_search
+theme: gg
+region: header
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Αναζήτηση βοήθειας'
+  label_display: visible
+  provider: search
+  page_id: help_search
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /admin/help

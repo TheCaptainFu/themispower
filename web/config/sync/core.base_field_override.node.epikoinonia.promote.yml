@@ -1,0 +1,22 @@
+uuid: f7b80b26-7970-480a-af2a-9151078e351f
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.epikoinonia
+id: node.epikoinonia.promote
+field_name: promote
+entity_type: node
+bundle: epikoinonia
+label: 'Προβιβασμένο στην πρώτη σελίδα'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Ανοικτό
+  off_label: Κλειστό
+field_type: boolean

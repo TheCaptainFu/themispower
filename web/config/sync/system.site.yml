@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: el
+uuid: c933399d-0c04-4a7e-b780-f0d111a4f3b5
+name: themispower
+mail: themispower@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: el
+mail_notification: null
