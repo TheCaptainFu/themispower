@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for GG Homepage module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function gg_homepage_theme($existing, $type, $theme, $path) {
+  return [
+    'gg_homepage' => [
+      'variables' => [
+        'logged_in' => FALSE,
+        'current_user' => NULL,
+      ],
+    ],
+  ];
+}
+

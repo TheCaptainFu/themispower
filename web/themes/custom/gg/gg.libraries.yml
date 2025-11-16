@@ -1,0 +1,31 @@
+tailwind:
+  version: 1.x
+  css:
+    base:
+      css/tailwind.css: {}
+
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/style.css: {}
+  dependencies:
+    - gg/tailwind
+
+front-page:
+  version: 1.x
+  css:
+    theme:
+      css/front-page.css: {}
+  dependencies:
+    - gg/tailwind
+
+splide:
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css:
+        { type: external, minified: true }
+  js:
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js:
+      { type: external, minified: true }
+    js/splides-all.js: {}

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "tw:build": "tailwindcss -i ./web/themes/custom/gg/src/input.css -o ./web/themes/custom/gg/css/tailwind.css",
+    "dev": "tailwindcss -i ./web/themes/custom/gg/src/input.css -o ./web/themes/custom/gg/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}

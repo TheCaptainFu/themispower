@@ -1,0 +1,90 @@
+{#
+/**
+ * @file
+ * Default view template to display all the items in a view.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A CSS-safe version of the view name.
+ * - css_class: The user-specified classes for the view.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The pager next/prev links to display, if any.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Feed icons to display, if any.
+ * - more: A link to view more items, if any.
+ * - title: Title of the view, if any.
+ * - attachment_before: An optional attachment view to be displayed before the rows.
+ * - attachment_after: An optional attachment view to be displayed after the rows.
+ * - dom_id: Unique id for every view being printed to ensure distinct HTML IDs.
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+<div{{ content_attributes.addClass("gg-container" ) }}>
+  {{ title_prefix }}
+  {% if title %}
+    <h2>{{ title }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if header %}
+    <div class="view-header">
+      {{ header }}
+    </div>
+  {% endif %}
+
+  {% if exposed %}
+    <div class="view-filters  mb-50 [&_.form-text]:border-black [&_.form-text]:border [&_.form-text]:outline-none [&_.form-text]:w-[300px] [&_.form-text]:py-10 [&_.form-text]:px-15 [&_.form-text]:rounded-[10px] 
+    [&_label]:text-[#4460cb] [&_label]:font-bold [&_label]:text-mid 
+    [&_select]:border-black [&_select]:border [&_select]:w-[300px] [&_select]:outline-none [&_select]:px-15 [&_select]:py-10 [&_select]:rounded-[10px]
+     [&_form]:grid [&_form]:grid-cols-3 [&_form]:gap-15 [&_.js-form-item]:flex [&_.js-form-item]:gap-15 [&_.js-form-item]:items-center
+     bg-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] p-25 rounded-[15px]">
+      {{ exposed }}
+    </div>
+  {% endif %}
+
+  {% if attachment_before %}
+    <div class="attachment attachment-before">
+      {{ attachment_before }}
+    </div>
+  {% endif %}
+
+  {% if rows %}
+    <div class="view-content  grid grid-cols-3 gap-50 mb-50">
+      {{ rows }}
+    </div>
+  {% elseif empty %}
+    <div class="view-empty flex items-center justify-center h-[200px] bg-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] rounded-[15px] p-25 text-medium leading-medium text-black">
+     <p> Δεν υπάρχουν προιόντα σε αυτή την κατηγορία</p>
+    </div>
+  {% endif %}
+
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+
+  {% if attachment_after %}
+    <div class="attachment attachment-after">
+      {{ attachment_after }}
+    </div>
+  {% endif %}
+
+  {% if more %}
+    {{ more }}
+  {% endif %}
+
+  {% if footer %}
+    <div class="view-footer">
+      {{ footer }}
+    </div>
+  {% endif %}
+
+  {% if feed_icons %}
+    <div class="feed-icons">
+      {{ feed_icons }}
+    </div>
+  {% endif %}
+</div>

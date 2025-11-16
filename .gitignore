@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Compiled Tailwind CSS
+web/themes/custom/gg/css/tailwind.css
+
+# npm
+package-lock.json
+
+# Drupal files
+web/sites/*/files/
+web/sites/*/private/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+

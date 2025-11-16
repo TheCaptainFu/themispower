@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Your custom styles can go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+@theme {
+  --spacing-5: 5px;
+  --spacing-10: 10px;
+  --spacing-15: 15px;
+  --spacing-20: 20px;
+  --spacing-22: 22px;
+  --spacing-25: 25px;
+  --spacing-30: 30px;
+  --spacing-35: 35px;
+  --spacing-40: 40px;
+  --spacing-45: 45px;
+  --spacing-50: 50px;
+  --spacing-55: 55px;
+  --spacing-60: 60px;
+  --spacing-65: 65px;
+  --spacing-70: 70px;
+  --spacing-75: 75px;
+  --spacing-80: 80px;
+  --spacing-85: 85px;
+  --spacing-90: 90px;
+  --spacing-100: 100px;
+  --spacing-120: 120px;
+  --spacing-130: 130px;
+  --spacing-140: 140px;
+  --spacing-150: 150px;
+  --spacing-180: 180px;
+  --spacing-225: 225px;
+  --spacing-240: 240px;
+  --spacing-250: 250px;
+  --spacing-350: 350px;
+
+  --spacing-small: 20px;
+  --spacing-normal: 24px;
+  --spacing-mid: 26px;
+  --spacing-large: 28px;
+  --spacing-xlarge: 30px;
+
+  --breakpoint-mob: 420px;
+  --breakpoint-tab: 768px;
+  --breakpoint-desk: 1024px;
+  --breakpoint-wide: 1400px;
+
+  --color-primary-blue: #4460cb;
+
+  --text-xsmall: 14px;
+  --text-small: 16px;
+  --text-normal: 18px;
+  --text-mid: 20px;
+  --text-large: 22px;
+  --text-xlarge: 24px;
+  --text-xxlarge: 28px;
+  --text-xxxlarge: 32px;
+  --text-xxxxlarge: 38px;
+  --text-xxxxxlarge: 70px;
+  --text-big: 90px;
+  --text-big-2: 120px;
+  --text-huge: 180px;
+}
+
+@layer components {
+  .gg-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (width >= 1380px) {
+    .gg-container {
+      max-width: 1440px;
+    }
+  }
+}
+
+.splide-item .splide__track,
+.splide-item .splide__list {
+  height: fit-content !important;
+  min-height: 0 !important;
+}
+
+.splide-item .splide__slide {
+  height: fit-content !important;
+  min-height: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.splide-item .splide__slide > * {
+  width: 100%;
+}
+
+.splide-item .splide__slide img {
+  width: 100% !important;
+  height: fit-content !important;
+  display: block;
+  object-fit: contain;
+}

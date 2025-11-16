@@ -1,0 +1,8 @@
+gg_homepage.home:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\gg_homepage\Controller\HomeController::content'
+    _title: 'Home'
+  requirements:
+    _permission: 'access content'
+

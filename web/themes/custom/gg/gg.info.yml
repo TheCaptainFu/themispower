@@ -1,0 +1,23 @@
+name: GG
+type: theme
+description: 'A custom theme called GG'
+core_version_requirement: ^11
+base theme: stable9
+
+libraries:
+  - gg/tailwind
+  - gg/global-styling
+
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
+

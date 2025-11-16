@@ -1,0 +1,109 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ *
+ * Available variables:
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - page.header: Items for the header region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.highlighted: Items for the highlighted content region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.footer: Items for the footer region.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ */
+#}
+<div class="layout-container">
+
+  <header role="banner" class="site-header">
+    <div class="header-wrapper z-50 fixed w-full bg-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] backdrop-blur-2xl">
+      <div class="header-container gg-container py-10 flex justify-between items-center">
+        <img src="/themes/custom/gg/images/logo.png" alt="" class="max-h-80">
+        <div class="flex flex-col justify-center items-center w-8 h-8 space-y-1 cursor-pointer">
+          <span class="block w-6 h-0.5 bg-primary-blue transition-all duration-300"></span>
+          <span class="block w-6 h-0.5 bg-primary-blue transition-all duration-300"></span>
+          <span class="block w-6 h-0.5 bg-primary-blue transition-all duration-300"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {% if page.primary_menu %}
+    <nav class="primary-menu">
+      {{ page.primary_menu }}
+    </nav>
+  {% endif %}
+
+  {% if page.secondary_menu %}
+    <nav class="secondary-menu">
+      {{ page.secondary_menu }}
+    </nav>
+  {% endif %}
+
+  {% if page.highlighted %}
+    <div class="highlighted">
+      {{ page.highlighted }}
+    </div>
+  {% endif %}
+
+  {% if page.help %}
+    <div class="help">
+      {{ page.help }}
+    </div>
+  {% endif %}
+
+ <main role="main" class="main-content pt-150 bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
+    <a id="main-content" tabindex="-1"></a>
+
+    {% block content_before %}
+    {% endblock %}
+      {% if page.breadcrumb %}
+      <div class="breadcrumb-wrapper gg-container">
+        {{ page.breadcrumb }}
+      </div>
+      {% endif %}
+      
+    <div class="content-wrapper">
+      <div class="layout-content">
+        {% block main_content %}
+          {{ page.content }}
+        {% endblock %}
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo" class="site-footer w-full shadow-[0_4px_10px_rgba(0,0,0,0.1)] bg-white">
+    <div class="gg-container flex items-center justify-between py-30">
+      <img src="/themes/custom/gg/images/logo.png" alt="" class="max-h-40">
+      <div class="media flex items-center justify-center gap-10 [&_svg]:w-25 [&_svg]:h-25 [&_svg]:fill-primary-blue">
+        <a href="https://www.facebook.com/" target="_blank" class=" mr-15">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1">
+          <title>facebook</title>
+          <path d="M30.996 16.091c-0.001-8.281-6.714-14.994-14.996-14.994s-14.996 6.714-14.996 14.996c0 7.455 5.44 13.639 12.566 14.8l0.086 0.012v-10.478h-3.808v-4.336h3.808v-3.302c-0.019-0.167-0.029-0.361-0.029-0.557 0-2.923 2.37-5.293 5.293-5.293 0.141 0 0.281 0.006 0.42 0.016l-0.018-0.001c1.199 0.017 2.359 0.123 3.491 0.312l-0.134-0.019v3.69h-1.892c-0.086-0.012-0.185-0.019-0.285-0.019-1.197 0-2.168 0.97-2.168 2.168 0 0.068 0.003 0.135 0.009 0.202l-0.001-0.009v2.812h4.159l-0.665 4.336h-3.494v10.478c7.213-1.174 12.653-7.359 12.654-14.814v-0z"/>
+          </svg>
+        </a>
+        <a href="https://www.twitter.com/" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 20 20" version="1.1">
+            <title>instagram [#167]</title>
+            <desc>Created with Sketch.</desc>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="#4460cb">
+                <g id="icons" transform="translate(56.000000, 160.000000)">
+                  <path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank"></a>
+      </div>
+      <a href="/contact" class="px-15 py-10 bg-primary-blue rounded-full text-white text-xsmall">Επικοινωνία</a>
+    </div>
+  </footer>
+
+</div>
+

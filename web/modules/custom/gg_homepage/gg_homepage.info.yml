@@ -1,0 +1,6 @@
+name: 'GG Homepage'
+type: module
+description: 'Provides a custom homepage for the GG theme'
+core_version_requirement: ^11
+package: Custom
+

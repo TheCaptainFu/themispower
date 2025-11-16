@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ * - node_title: The current node title (added via preprocessing).
+ */
+#}
+<nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+  <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+  <ol class="breadcrumb-list flex items-center gap-2 text-sm">
+    {# Always show Home (Αρχική) #}
+    <li class="breadcrumb-item">
+      <a href="{{ path('<front>') }}" class="breadcrumb-link text-blue-600 hover:text-blue-800 transition-colors">
+        Αρχική
+      </a>
+    </li>
+    {# Show separator and current page if we have a title #}
+      <li class="breadcrumb-separator text-gray-400 mx-1" aria-hidden="true">
+        →
+      </li>
+      
+      <li class="breadcrumb-item breadcrumb-item--active">
+        <span class="breadcrumb-current text-gray-700 font-semibold">
+          {{ content['#links'].2.text }}
+        </span>
+      </li>
+  </ol>
+</nav>
