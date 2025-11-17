@@ -1,0 +1,5 @@
+name: Contact Page
+type: module
+description: "This module provides a custom contact page."
+core_version_requirement: ^10 || ^11
+package: Custom

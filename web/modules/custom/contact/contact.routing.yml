@@ -1,0 +1,7 @@
+contact.custom_page:
+  path: "/contact"
+  defaults:
+    _controller: '\Drupal\contact\Controller\ContactPageController::content'
+    _title: "Contact Us"
+  requirements:
+    _permission: "access content"

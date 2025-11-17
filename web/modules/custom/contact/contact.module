@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains contact.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function contact_theme($existing, $type, $theme, $path) {
+  return [
+    'contact_page' => [
+      'variables' => [
+        'email' => NULL,
+        'phone' => NULL,
+        'address' => NULL,
+        'hours' => [],
+      ],
+    ],
+  ];
+}
