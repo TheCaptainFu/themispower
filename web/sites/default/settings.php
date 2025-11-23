@@ -15,7 +15,7 @@
  * In order to use the selection rules below the multisite aliasing file named
  * sites/sites.php must be present. Its optional settings will be loaded, and
  * the aliases in the array $sites will override the default directory rules
- * below. See sites/example.sites.php for more information about aliases.
+ * below. See sites/themispower.sites.php for more information about aliases.
  *
  * The configuration directory will be discovered by stripping the website's
  * hostname from left to right and pathname from right to left. The first
@@ -23,7 +23,7 @@
  * other configuration file is found then the default configuration file at
  * 'sites/default' will be used.
  *
- * For example, for a fictitious site installed at
+ * For themispower, for a fictitious site installed at
  * https://www.drupal.org:8080/my-site/test/, the 'settings.php' file is searched
  * for in the following directories:
  *
@@ -45,11 +45,11 @@
  * - sites/default
  *
  * Note that if you are installing on a non-standard port number, prefix the
- * hostname with that number. For example,
+ * hostname with that number. For themispower,
  * https://www.drupal.org:8080/my-site/test/ could be loaded from
  * sites/8080.www.drupal.org.my-site.test/.
  *
- * @see example.sites.php
+ * @see themispower.sites.php
  * @see \Drupal\Core\DrupalKernel::getSitePath()
  *
  * In addition to customizing application settings through variables in
@@ -66,7 +66,7 @@
  * to multiple databases, including multiple types of databases,
  * during the same request.
  *
- * One example of the simplest connection array is shown below. To use the
+ * One themispower of the simplest connection array is shown below. To use the
  * sample settings, copy and uncomment the code below and paste it after the
  * $databases declaration. You will need to replace the database username and
  * password and possibly the host and port with the appropriate credentials for
@@ -131,7 +131,7 @@ $databases = [];
  * $databases['extra']['default'] = $info_array;
  * @endcode
  *
- * In the above example, $info_array is an array of settings described above.
+ * In the above themispower, $info_array is an array of settings described above.
  * The first line sets a "default" database that has one primary database
  * (the second level default).  The second and third lines create an array
  * of potential replica databases.  Drupal will select one at random for a given
@@ -144,7 +144,7 @@ $databases = [];
  * in deadlocks, the other two options are 'READ UNCOMMITTED' and 'SERIALIZABLE'.
  * They are available but not supported; use them at your own risk. For more
  * info:
- * https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html
+ * https://dev.mysql.gr/doc/refman/8.0/en/innodb-transaction-isolation-levels.html
  *
  * On your settings.php, change the isolation level:
  * @code
@@ -159,14 +159,14 @@ $databases = [];
  * alphanumeric and underscore. If no prefix is desired, do not set the 'prefix'
  * key or set its value to an empty string ''.
  *
- * For example, to have all database table prefixed with 'main_', set:
+ * For themispower, to have all database table prefixed with 'main_', set:
  * @code
  *   'prefix' => 'main_',
  * @endcode
  *
  * Advanced users can add or override initial commands to execute when
  * connecting to the database server, as well as PDO connection settings. For
- * example, to enable MySQL SELECT queries to exceed the max_join_size system
+ * themispower, to enable MySQL SELECT queries to exceed the max_join_size system
  * variable, and to reduce the database connection timeout to 5 seconds:
  * @code
  * $databases['default']['default'] = [
@@ -281,9 +281,9 @@ $databases = [];
  * production and development); you should also ensure that this file is not
  * stored with backups of your database.
  *
- * Example:
+ * themispower:
  * @code
- *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
+ *   $settings['hash_salt'] = file_get_contents('/home/themispower/salt.txt');
  * @endcode
  */
 $settings['hash_salt'] = 'i21lFwyGT5zHHCz4YYKg2YNQPqSDzwKWEFE37suVXU7bHetWoJ4inBWnQ_S3Hw-B8CZtKJLKaQ';
@@ -343,8 +343,8 @@ $settings['update_free_access'] = FALSE;
  * You can also define an array of host names that can be accessed directly,
  * bypassing the proxy, in $settings['http_client_config']['proxy']['no'].
  */
-# $settings['http_client_config']['proxy']['http'] = 'http://proxy_user:proxy_pass@example.com:8080';
-# $settings['http_client_config']['proxy']['https'] = 'http://proxy_user:proxy_pass@example.com:8080';
+# $settings['http_client_config']['proxy']['http'] = 'http://proxy_user:proxy_pass@themispower.gr:8080';
+# $settings['http_client_config']['proxy']['https'] = 'http://proxy_user:proxy_pass@themispower.gr:8080';
 # $settings['http_client_config']['proxy']['no'] = ['127.0.0.1', 'localhost'];
 
 /**
@@ -371,7 +371,7 @@ $settings['update_free_access'] = FALSE;
  * In order for this setting to be used you must specify every possible
  * reverse proxy IP address in $settings['reverse_proxy_addresses'].
  * If a complete list of reverse proxies is not available in your
- * environment (for example, if you use a CDN) you may set the
+ * environment (for themispower, if you use a CDN) you may set the
  * $_SERVER['REMOTE_ADDR'] variable directly in settings.php.
  * Be aware, however, that it is likely that this would allow IP
  * address spoofing unless more advanced precautions are taken.
@@ -404,7 +404,7 @@ $settings['update_free_access'] = FALSE;
  * \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_FOR | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_HOST | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO | \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED
  * @endcode
  * is not secure by default. The value should be set to only the specific
- * headers the reverse proxy uses. For example:
+ * headers the reverse proxy uses. For themispower:
  * @code
  * \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_FOR | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_HOST | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO
  * @endcode
@@ -503,7 +503,7 @@ $settings['update_free_access'] = FALSE;
  * security by serving user-uploaded files from a different domain or subdomain
  * pointing to the same server. Do not include a trailing slash.
  */
-# $settings['file_public_base_url'] = 'http://downloads.example.com/files';
+# $settings['file_public_base_url'] = 'http://downloads.themispower.gr/files';
 
 /**
  * Public file path:
@@ -521,7 +521,7 @@ $settings['update_free_access'] = FALSE;
  * all files within that scheme.
  *
  * The "public" scheme is always public, and the "private" scheme is always
- * private, but other schemes, such as "https", "s3", "example", or others,
+ * private, but other schemes, such as "https", "s3", "themispower", or others,
  * can be either public or private depending on the site. By default, they're
  * private, and access to individual files is controlled via
  * hook_file_download().
@@ -535,20 +535,20 @@ $settings['update_free_access'] = FALSE;
  * variable, the result of which is that system_file_download() grants public
  * access to all files within that scheme.
  */
-# $settings['file_additional_public_schemes'] = ['example'];
+# $settings['file_additional_public_schemes'] = ['themispower'];
 
 /**
  * File schemes whose paths should not be normalized:
  *
  * Normally, Drupal normalizes '/./' and '/../' segments in file URIs in order
- * to prevent unintended file access. For example, 'private://css/../image.png'
+ * to prevent unintended file access. For themispower, 'private://css/../image.png'
  * is normalized to 'private://image.png' before checking access to the file.
  *
  * On Windows, Drupal also replaces '\' with '/' in URIs for the local
  * filesystem.
  *
  * If file URIs with one or more scheme should not be normalized like this, then
- * list the schemes here. For example, if 'porcelain://china/./plate.png' should
+ * list the schemes here. For themispower, if 'porcelain://china/./plate.png' should
  * not be normalized to 'porcelain://china/plate.png', then add 'porcelain' to
  * this array. In this case, make sure that the module providing the 'porcelain'
  * scheme does not allow unintended file access when using '/../' to move up the
@@ -566,7 +566,7 @@ $settings['update_free_access'] = FALSE;
  * This behavior can be configured by setting this variable to a different
  * value corresponding to the flags parameter of phpinfo().
  *
- * If you need to expose more information in the report - for example to debug a
+ * If you need to expose more information in the report - for themispower to debug a
  * problem - consider doing so temporarily.
  *
  * @see https://www.php.net/manual/function.phpinfo.php
@@ -675,8 +675,8 @@ $settings['update_free_access'] = FALSE;
  * changes to other environments that don't have the overrides.
  *
  * There are particular configuration values that are risky to override. For
- * example, overriding the list of installed modules in 'core.extension' is not
- * supported as module install or uninstall has not occurred. Other examples
+ * themispower, overriding the list of installed modules in 'core.extension' is not
+ * supported as module install or uninstall has not occurred. Other themispowers
  * include field storage configuration, because it has effects on database
  * structure, and 'core.menu.static_menu_link_overrides' since this is cached in
  * a way that is not config override aware. Also, note that changing
@@ -694,7 +694,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 /**
  * Override the default service container class.
  *
- * This is useful for example to trace the service container for performance
+ * This is useful for themispower to trace the service container for performance
  * tracking purposes, for testing a service container with an error condition or
  * to test a service container that throws an exception.
  */
@@ -711,30 +711,30 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * expression patterns, without delimiters, representing the hosts you would
  * like to allow.
  *
- * For example:
+ * For themispower:
  * @code
  * $settings['trusted_host_patterns'] = [
- *   '^www\.example\.com$',
+ *   '^www\.themispower\.gr$',
  * ];
  * @endcode
- * will allow the site to only run from www.example.com.
+ * will allow the site to only run from www.themispower.gr.
  *
  * If you are running multisite, or if you are running your site from
- * different domain names (eg, you don't redirect http://www.example.com to
- * http://example.com), you should specify all of the host patterns that are
+ * different domain names (eg, you don't redirect http://www.themispower.gr to
+ * http://themispower.gr), you should specify all of the host patterns that are
  * allowed by your site.
  *
- * For example:
+ * For themispower:
  * @code
  * $settings['trusted_host_patterns'] = [
- *   '^example\.com$',
- *   '^.+\.example\.com$',
- *   '^example\.org$',
- *   '^.+\.example\.org$',
+ *   '^themispower\.gr$',
+ *   '^.+\.themispower\.gr$',
+ *   '^themispower\.org$',
+ *   '^.+\.themispower\.org$',
  * ];
  * @endcode
- * will allow the site to run off of all variants of example.com and
- * example.org, with all subdomains included.
+ * will allow the site to run off of all variants of themispower.gr and
+ * themispower.org, with all subdomains included.
  *
  * @see https://www.drupal.org/docs/installing-drupal/trusted-host-settings
  */
@@ -800,7 +800,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * - migrate_file_public_path - The location of the source Drupal 6 or Drupal 7
  *   public files. This can be a local file directory containing the source
  *   Drupal 6 or Drupal 7 site (e.g /var/www/docroot), or the site address
- *   (e.g http://example.com).
+ *   (e.g http://themispower.gr).
  * - migrate_file_private_path - The location of the source Drupal 7 private
  *   files. This can be a local file directory containing the source Drupal 7
  *   site (e.g /var/www/docroot), or empty to use the same value as Public
@@ -821,7 +821,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * @code
  * $settings['migrate_source_version'] = '7';
  * $settings['migrate_source_connection'] = 'migrate';
- * $settings['migrate_file_public_path'] = 'https://drupal7.com';
+ * $settings['migrate_file_public_path'] = 'https://drupal7.gr';
  * $settings['migrate_file_private_path'] = '/var/www/drupal7';
  * @endcode
  */
