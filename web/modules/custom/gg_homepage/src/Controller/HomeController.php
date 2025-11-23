@@ -20,14 +20,24 @@ class HomeController extends ControllerBase {
     $current_user = \Drupal::currentUser();
     $is_logged_in = $current_user->isAuthenticated();
     
-    return [
+    $build = [
       '#theme' => 'gg_homepage',
       '#logged_in' => $is_logged_in,
       '#current_user' => [
         'name' => $current_user->getAccountName(),
         'id' => $current_user->id(),
       ],
+      '#attached' => [
+        'http_header' => [
+          ['Cache-Control', 'no-cache, no-store, must-revalidate, max-age=0'],
+          ['Pragma', 'no-cache'],
+          ['Expires', '0'],
+          ['X-LiteSpeed-Cache-Control', 'no-cache'],
+        ],
+      ],
     ];
+    
+    return $build;
   }
 
 }
