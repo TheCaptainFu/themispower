@@ -738,7 +738,24 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  *
  * @see https://www.drupal.org/docs/installing-drupal/trusted-host-settings
  */
-# $settings['trusted_host_patterns'] = [];
+$settings['trusted_host_patterns'] = [
+  '^www\.themispower\.gr$',
+  '^themispower\.gr$',
+];
+
+/**
+ * Cookie domain configuration
+ * This ensures sessions work across www and non-www versions
+ */
+$cookie_domain = '.themispower.gr';
+
+/**
+ * Reverse proxy configuration for Hostinger
+ * This is needed for proper HTTPS handling on shared hosting
+ */
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+  $_SERVER['HTTPS'] = 'on';
+}
 
 /**
  * The default list of directories that will be ignored by Drupal's file API.
