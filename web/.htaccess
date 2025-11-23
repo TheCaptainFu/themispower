@@ -18,6 +18,17 @@ Options -Indexes
 # Set the default handler.
 DirectoryIndex index.php index.html index.htm
 
+# Disable caching for homepage to prevent Hostinger LiteSpeed cache issues
+<IfModule mod_headers.c>
+  # If accessing root or /home, prevent ALL caching
+  SetEnvIf Request_URI "^/$" no-cache=1
+  SetEnvIf Request_URI "^/home$" no-cache=1
+  Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0" env=no-cache
+  Header always set Pragma "no-cache" env=no-cache
+  Header always set Expires "0" env=no-cache
+  Header always set X-LiteSpeed-Cache-Control "no-cache" env=no-cache
+</IfModule>
+
 # Add correct encoding for SVGZ.
 AddType image/svg+xml svg svgz
 AddEncoding gzip svgz
