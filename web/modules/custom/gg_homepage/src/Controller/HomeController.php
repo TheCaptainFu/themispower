@@ -28,8 +28,8 @@ class HomeController extends ControllerBase {
         'id' => $current_user->id(),
       ],
       '#cache' => [
-        'contexts' => ['user'], // Cache per user
-        'tags' => ['user:' . $current_user->id()],
+        'max-age' => 0, // Disable caching for home page
+        'contexts' => ['user.roles'], // Cache varies by user role (anonymous vs authenticated)
       ],
     ];
 
