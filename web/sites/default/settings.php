@@ -758,6 +758,11 @@ if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROT
 }
 
 /**
+ * Use Drupal's internal page cache
+ */
+$config['system.performance']['cache']['page']['use_internal'] = TRUE;
+
+/**
  * The default list of directories that will be ignored by Drupal's file API.
  *
  * By default ignore node_modules and bower_components folders to avoid issues
