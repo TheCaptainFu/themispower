@@ -60,7 +60,7 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
+<article{{ attributes.addClass('h-full') }}>
 
   {{ title_prefix }}
   {% if label and not page %}
@@ -79,14 +79,14 @@
     </footer>
   {% endif %}
 
-    <div{{ content_attributes.addClass('shadow-lg', 'rounded-[15px]', '[&_img]:w-full') }}>
-        <a href="{{url}}">
+    <div{{ content_attributes.addClass('shadow-lg', 'rounded-[15px]', '[&_img]:w-full', 'h-full', 'overflow-hidden') }}>
+        <a href="{{url}}" class="image-zoom-wrapper block overflow-hidden rounded-t-[15px]">
             {{ drupal_image(content.field_eikones.0["#media"].field_media_image.0.entity.uri.value, "teaser_item_frontpage") }}
         </a>        
         <div class="text p-20">
-            <a href="{{url}}" class="category text-small leading-small text-black italic mb-10">
-                {{ content.field_katigoria }}
-            </a>
+            <p class="category text-small leading-small text-black italic mb-10">
+                {{ content.field_katigoria.0["#title"] }}
+            </p>
             <a href="{{url}}" class="title text-medium leading-medium text-black font-bold mb-10">
                 {{ label }}
             </a>
