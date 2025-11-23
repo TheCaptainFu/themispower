@@ -1,0 +1,145 @@
+{#
+/**
+ * @file
+ * Template for the GG custom homepage content.
+ *
+ * Shows different content based on user login status.
+ * Available variables:
+ * - logged_in: TRUE if user is logged in, FALSE if anonymous
+ * - current_user: Current user object
+ */
+#}
+
+<div class="gg-homepage">
+
+  {% if logged_in %}
+    {# ========================================
+       LOGGED IN USER VIEW
+       ======================================== #}
+    
+    {# Welcome Back Section #}
+    <section class="welcome-back-section">
+      <div class="welcome-content">
+        <h1 class="welcome-title">Welcome Back, {{ current_user.name }}!</h1>
+        <p class="welcome-subtitle">Ready to continue where you left off?</p>
+      </div>
+    </section>
+
+    {# Dashboard Quick Links #}
+    <section class="dashboard-section">
+      <div class="dashboard-container">
+        <h2>Quick Actions</h2>
+        
+        <div class="quick-links-grid">
+          <a href="/node/add" class="quick-link-card">
+            <div class="quick-link-icon">📝</div>
+            <h3>Create Content</h3>
+            <p>Add new articles, pages, or posts</p>
+          </a>
+          
+          <a href="/admin/content" class="quick-link-card">
+            <div class="quick-link-icon">📋</div>
+            <h3>Manage Content</h3>
+            <p>View and edit your content</p>
+          </a>
+          
+          <a href="/user" class="quick-link-card">
+            <div class="quick-link-icon">👤</div>
+            <h3>Your Profile</h3>
+            <p>Update your account settings</p>
+          </a>
+          
+          <a href="/admin" class="quick-link-card">
+            <div class="quick-link-icon">⚙️</div>
+            <h3>Site Admin</h3>
+            <p>Configure your website</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {# Recent Activity Section #}
+    <section class="activity-section">
+      <div class="activity-container">
+        <h2>Recent Activity</h2>
+        <p>Your latest updates and notifications will appear here</p>
+        {# You can add dynamic content here via the controller #}
+      </div>
+    </section>
+
+  {% else %}
+    {# ========================================
+       LOGGED OUT / ANONYMOUS USER VIEW
+       ======================================== #}
+    
+    {# Hero Section for Anonymous Users #}
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Welcome to GG</h1>
+        <p class="hero-subtitle">Your powerful Drupal site built with passion</p>
+        <div class="hero-actions">
+          <a href="/user/register" class="btn btn-primary">Get Started</a>
+          <a href="/user/login" class="btn btn-secondary">Sign In</a>
+        </div>
+      </div>
+    </section>
+
+    {# Features Section #}
+    <section id="features" class="features-section">
+      <div class="section-header">
+        <h2>Why Choose Us</h2>
+        <p>Discover what makes us different</p>
+      </div>
+      
+      <div class="features-container">
+        <div class="feature-item">
+          <div class="feature-icon">🚀</div>
+          <h3>Lightning Fast</h3>
+          <p>Optimized for speed and performance. Your users will love the experience.</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">🎨</div>
+          <h3>Beautiful Design</h3>
+          <p>Modern, clean interface with attention to every detail. Design that matters.</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">📱</div>
+          <h3>Fully Responsive</h3>
+          <p>Works seamlessly on all devices - desktop, tablet, and mobile.</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">🔒</div>
+          <h3>Secure</h3>
+          <p>Built with security best practices. Your data is safe with us.</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <h3>Easy to Use</h3>
+          <p>Intuitive interface that anyone can use. No training required.</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">💪</div>
+          <h3>Powerful</h3>
+          <p>All the features you need to succeed. Customizable to your needs.</p>
+        </div>
+      </div>
+    </section>
+
+    {# Call to Action Section #}
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Ready to Get Started?</h2>
+        <p>Join thousands of satisfied users today</p>
+        <a href="/user/register" class="btn btn-large">Sign Up Now</a>
+      </div>
+    </section>
+
+  {% endif %}
+
+</div>
+
