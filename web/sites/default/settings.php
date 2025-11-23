@@ -883,6 +883,11 @@ $databases['default']['default'] = array (
 );
 $settings['config_sync_directory'] = '../config/sync';
 
+// Image settings configuration
+$config['image.settings']['allow_insecure_derivatives'] = TRUE;
+$config['image.settings']['suppress_itok_output'] = TRUE;
+$settings['file_public_path'] = 'sites/default/files';
+
 // Automatically generated include for settings managed by ddev.
 $ddev_settings = __DIR__ . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
