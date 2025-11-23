@@ -18,22 +18,6 @@ Options -Indexes
 # Set the default handler.
 DirectoryIndex index.php index.html index.htm
 
-# Disable caching for homepage and logged-in users - Hostinger LiteSpeed fix
-<IfModule mod_headers.c>
-  # If accessing root or /home, prevent ALL caching
-  SetEnvIf Request_URI "^/$" no-cache=1
-  SetEnvIf Request_URI "^/home$" no-cache=1
-  # If user has session cookie (logged in), prevent caching
-  SetEnvIf Cookie "(SESS|SSESS)" no-cache=1
-  
-  # Apply no-cache headers when no-cache environment variable is set
-  Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0" env=no-cache
-  Header always set Pragma "no-cache" env=no-cache
-  Header always set Expires "Thu, 01 Jan 1970 00:00:00 GMT" env=no-cache
-  Header always set X-LiteSpeed-Cache-Control "no-cache" env=no-cache
-  Header always unset ETag env=no-cache
-</IfModule>
-
 # Add correct encoding for SVGZ.
 AddType image/svg+xml svg svgz
 AddEncoding gzip svgz
@@ -78,14 +62,6 @@ AddType image/webp .webp
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
   RewriteEngine on
-
-  # Disable caching for homepage (root /) - Hostinger LiteSpeed fix
-  RewriteCond %{REQUEST_URI} ^/$
-  RewriteRule ^ - [E=Cache-Control:no-cache,E=no-cache:1]
-  
-  # Disable caching when user has session cookie (logged in)
-  RewriteCond %{HTTP_COOKIE} (SESS|SSESS) [NC]
-  RewriteRule ^ - [E=Cache-Control:no-cache,E=no-cache:1]
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
