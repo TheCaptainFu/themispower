@@ -16,9 +16,9 @@ global-styling:
 
 front-page:
   version: 1.x
-  css:
-    theme:
-      css/front-page.css: {}
+  # css:
+  #   theme:
+  #     css/front-page.css: {}
   dependencies:
     - gg/tailwind
 

@@ -81,7 +81,9 @@
 
     <div{{ content_attributes.addClass('shadow-lg', 'rounded-[15px]', '[&_img]:w-full', 'h-full', 'overflow-hidden') }}>
         <a href="{{url}}" class="image-zoom-wrapper block overflow-hidden rounded-t-[15px]">
-            {{ drupal_image(content.field_eikones.0["#media"].field_media_image.0.entity.uri.value, "teaser_item_frontpage") }}
+        {% if content.field_eikones.0["#media"].field_media_image.0.entity.uri.value %}
+          {{ drupal_image(content.field_eikones.0["#media"].field_media_image.0.entity.uri.value, "teaser_item_frontpage") }}
+        {% endif %}
         </a>        
         <div class="text p-20">
             <p class="category text-small leading-small text-black italic mb-10">

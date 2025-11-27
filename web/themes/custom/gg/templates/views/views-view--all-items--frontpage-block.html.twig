@@ -37,10 +37,10 @@
   {% endif %}
 
   {% if exposed %}
-    <div class="view-filters  mb-50 [&_.form-text]:border-black [&_.form-text]:border [&_.form-text]:outline-none [&_.form-text]:w-[300px] [&_.form-text]:py-10 [&_.form-text]:px-15 [&_.form-text]:rounded-[10px] 
+    <div class="view-filters mb-50 max-tab:[&_.js-form-item]:w-full max-tab:[&_.js-form-item]:flex max-tab:[&_.js-form-item]:flex-col max-tab:[&_.js-form-item]:items-start [&_.form-text]:border-black [&_.form-text]:border [&_.form-text]:outline-none tab:[&_.form-text]:w-[250px] [&_.form-text]:w-full [&_.form-text]:py-10 [&_.form-text]:px-15 [&_.form-text]:rounded-[10px] 
     [&_label]:text-[#4460cb] [&_label]:font-bold [&_label]:text-mid 
-    [&_select]:border-black [&_select]:border [&_select]:w-[300px] [&_select]:outline-none [&_select]:px-15 [&_select]:py-10 [&_select]:rounded-[10px]
-     [&_form]:grid [&_form]:grid-cols-3 [&_form]:gap-15 [&_.js-form-item]:flex [&_.js-form-item]:gap-15 [&_.js-form-item]:items-center
+    [&_select]:border-black [&_select]:border tab:[&_select]:w-[250px] [&_select]:w-full [&_select]:outline-none [&_select]:px-15 [&_select]:py-10 [&_select]:rounded-[10px]
+     [&_form]:flex [&_form]:flex-wrap [&_form]:gap-15 [&_.js-form-item]:flex [&_.js-form-item]:gap-15 [&_.js-form-item]:items-center
      bg-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] p-25 rounded-[15px]">
       {{ exposed }}
     </div>
@@ -53,7 +53,7 @@
   {% endif %}
 
   {% if rows %}
-    <div class="view-content  grid grid-cols-3 gap-50 mb-50">
+    <div class="view-content  grid desk:grid-cols-3 mob:grid-cols-2 gap-50 mb-50">
       {{ rows }}
     </div>
   {% elseif empty %}
