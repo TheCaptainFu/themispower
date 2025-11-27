@@ -1,31 +1,57 @@
 # DDEV local environment
-.ddev/
+/.ddev/
 
-# Drupal core
-/core
-/modules/contrib
-/themes/contrib
-/profiles/contrib
-/libraries
+# Drupal core and contrib (managed by Composer)
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
 
-# Vendor directory (managed by composer)
-/vendor
-
-# Sites default files
-/web/sites/*/files
-/web/sites/*/private
+# Drupal file directories
+/web/sites/*/files/
+/web/sites/*/private/
 
 # Environment-specific settings
+/web/sites/*/settings.php
 /web/sites/*/settings.local.php
+/web/sites/*/services.yml
 /web/sites/*/services.local.yml
+!/web/sites/default/default.settings.php
+!/web/sites/default/default.services.yml
+
+# Ignore configuration sync (if not using config management)
+# Remove this line if you DO use drush config:export/import
+# /config/sync/
+
+# Logs and error files
+*.log
+/web/error_log
+**/error_log
 
 # Development files
-*.md
-/recipes
+/recipes/
 
-# Node modules if any
+# Node modules
 node_modules/
+npm-debug.log
+yarn-error.log
 
-# Other
+# IDE files
 .DS_Store
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+
+# Environment files
+.env
+.env.local
+.env.*.local
