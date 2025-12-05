@@ -1,0 +1,11 @@
+uuid: 5cf0bfc8-4240-4526-b776-6f1a7fff8932
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.anakoinosi
+id: node.anakoinosi
+target_entity_type_id: node
+target_bundle: anakoinosi
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,26 @@
+uuid: a81bad05-8f96-4eba-b855-462f50f8d197
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.full_html
+    - node.type.anakoinosi
+  module:
+    - text
+id: node.anakoinosi.body
+field_name: body
+entity_type: node
+bundle: anakoinosi
+label: body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

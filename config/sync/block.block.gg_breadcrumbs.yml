@@ -1,4 +1,4 @@
-uuid: 534e0f1a-7b3e-4b0c-ac1e-62605c12cac1
+uuid: 6a967aa6-e43c-4171-bf5f-3e9e55ee865c
 langcode: el
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - system
   theme:
     - gg
-_core:
-  default_config_hash: NjcxOBrPOiK5-38t56DwFBDVY4yer7YSlbRWXFuHe7A
 id: gg_breadcrumbs
 theme: gg
 region: breadcrumb

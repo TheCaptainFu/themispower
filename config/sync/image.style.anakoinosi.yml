@@ -1,0 +1,22 @@
+uuid: a9705d72-f93b-4682-97a6-f5fd39ab7eed
+langcode: el
+status: true
+dependencies:
+  module:
+    - image_effects
+name: anakoinosi
+label: ανακοινωση
+effects:
+  f83feab8-1305-409b-8665-025ca7fefec7:
+    uuid: f83feab8-1305-409b-8665-025ca7fefec7
+    id: image_effects_strip_metadata
+    weight: 1
+    data: {  }
+  ae7e7cda-649b-4333-8dda-eff6ae8efb77:
+    uuid: ae7e7cda-649b-4333-8dda-eff6ae8efb77
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1380
+      height: 250
+      anchor: center-center

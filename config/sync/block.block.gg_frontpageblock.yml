@@ -1,0 +1,30 @@
+uuid: 18850b2a-6207-40a8-9d92-2d9aef7cfd9e
+langcode: el
+status: true
+dependencies:
+  content:
+    - 'block_content:frontpage_top_image:fedef2b5-6d7f-4c01-b04c-61c592a1940a'
+  module:
+    - block_content
+    - system
+  theme:
+    - gg
+id: gg_frontpageblock
+theme: gg
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:fedef2b5-6d7f-4c01-b04c-61c592a1940a'
+settings:
+  id: 'block_content:fedef2b5-6d7f-4c01-b04c-61c592a1940a'
+  label: 'FrontPage Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

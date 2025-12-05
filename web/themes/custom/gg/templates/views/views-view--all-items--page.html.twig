@@ -26,13 +26,10 @@
 <div{{ content_attributes.addClass("gg-container" ) }}>
   {{ title_prefix }}
      {% if view.title %}
-      <a href="/items" class="flex justify-between items-end mb-15 pb-15 border-b border-[#CCCED3]">
-        <div class="title-wrapper flex items-end gap-10">
-          <span class="w-[7px] h-[32px] block bg-primary-blue"></span>
-          <h2 class="text-black text-xxxlarge leading-[36px] font-bold ">{{ view.title }}</h2>
-        </div>
-        <p class="text-normal text-black font-bold hover:text-primary-blue transition duration-300">Περισσότερα</p>
-      </a>
+     <div class="title-wrapper flex items-end gap-10 border-b border-[#CCCED3] mt-30 mb-15 pb-15">
+      <span class="w-[7px] h-[32px] block bg-primary-blue"></span>
+      <h2 class="text-black text-xxxlarge leading-[36px] font-bold ">{{ view.title }}</h2>
+    </div>
     {% endif %}
   {{ title_suffix }}
 

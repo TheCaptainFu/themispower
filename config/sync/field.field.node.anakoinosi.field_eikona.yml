@@ -1,0 +1,29 @@
+uuid: f29d2e24-9da1-46db-8da5-cc011d343edd
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eikona
+    - media.type.image
+    - node.type.anakoinosi
+id: node.anakoinosi.field_eikona
+field_name: field_eikona
+entity_type: node
+bundle: anakoinosi
+label: Εικόνα
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

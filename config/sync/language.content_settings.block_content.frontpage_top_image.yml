@@ -1,0 +1,11 @@
+uuid: 811f45cb-3c89-4937-933a-3a66ba7f0a1b
+langcode: el
+status: true
+dependencies:
+  config:
+    - block_content.type.frontpage_top_image
+id: block_content.frontpage_top_image
+target_entity_type_id: block_content
+target_bundle: frontpage_top_image
+default_langcode: site_default
+language_alterable: false
