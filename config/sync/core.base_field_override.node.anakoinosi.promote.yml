@@ -1,0 +1,22 @@
+uuid: 7328fbde-81ab-4461-bdbd-bf553ac6c555
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.anakoinosi
+id: node.anakoinosi.promote
+field_name: promote
+entity_type: node
+bundle: anakoinosi
+label: 'Προβιβασμένο στην πρώτη σελίδα'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Ανοικτό
+  off_label: Κλειστό
+field_type: boolean

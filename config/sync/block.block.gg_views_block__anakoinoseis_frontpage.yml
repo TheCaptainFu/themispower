@@ -1,22 +1,22 @@
-uuid: 97a8137b-693f-402b-b786-1d9ac8fccdb4
+uuid: 669552a4-6455-403e-bb54-bc443bcc8946
 langcode: el
 status: true
 dependencies:
   config:
-    - views.view.all_items
+    - views.view.anakoinoseis
   module:
     - system
     - views
   theme:
     - gg
-id: gg_views_block__all_items_frontpage_block
+id: gg_views_block__anakoinoseis_frontpage
 theme: gg
 region: content
-weight: -2
+weight: -3
 provider: null
-plugin: 'views_block:all_items-frontpage_block'
+plugin: 'views_block:anakoinoseis-frontpage'
 settings:
-  id: 'views_block:all_items-frontpage_block'
+  id: 'views_block:anakoinoseis-frontpage'
   label: ''
   label_display: '0'
   provider: views

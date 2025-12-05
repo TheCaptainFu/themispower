@@ -1,0 +1,29 @@
+uuid: a6e3b0b7-a34e-40b2-87ba-01c90838609e
+langcode: el
+status: true
+dependencies:
+  config:
+    - block_content.type.frontpage_top_image
+    - field.storage.block_content.field_eikona
+    - media.type.image
+id: block_content.frontpage_top_image.field_eikona
+field_name: field_eikona
+entity_type: block_content
+bundle: frontpage_top_image
+label: Εικόνα
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

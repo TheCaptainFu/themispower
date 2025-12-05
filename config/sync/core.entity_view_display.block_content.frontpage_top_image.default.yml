@@ -1,0 +1,23 @@
+uuid: 723c4918-4fae-4c24-8f43-792ede8b0ab1
+langcode: el
+status: true
+dependencies:
+  config:
+    - block_content.type.frontpage_top_image
+    - field.field.block_content.frontpage_top_image.field_eikona
+id: block_content.frontpage_top_image.default
+targetEntityType: block_content
+bundle: frontpage_top_image
+mode: default
+content:
+  field_eikona:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

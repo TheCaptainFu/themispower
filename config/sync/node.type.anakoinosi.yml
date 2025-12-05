@@ -1,0 +1,18 @@
+uuid: 2411cc6d-1560-46aa-a29c-9fad882fd16f
+langcode: el
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Ανακοίνωση
+type: anakoinosi
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

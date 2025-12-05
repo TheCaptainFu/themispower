@@ -34,6 +34,9 @@
           <a href="/">
             <p class="text-normal text-black font-600 hover:text-primary-blue transition-all duration-300">Αρχική</p>
           </a>
+          <a href="/announcements">
+            <p class="text-normal text-black font-600 hover:text-primary-blue transition-all duration-300">Ανακοινώσεις</p>
+          </a>
           <a href="/contact">
             <p class="text-normal text-black font-600 hover:text-primary-blue transition-all duration-300">Επικοινωνία</p>
           </a>
@@ -66,13 +69,13 @@
     </div>
   {% endif %}
 
- <main role="main" class="main-content pt-150 bg-gradient-to-br from-gray-50 to-blue-50 min-h-[calc(100vh-102px)]">
+ <main role="main" class="main-content pt-100 bg-gradient-to-br from-gray-50 to-blue-50 min-h-[calc(100vh-102px)]">
     <a id="main-content" tabindex="-1"></a>
 
     {% block content_before %}
     {% endblock %}
       {% if page.breadcrumb %}
-      <div class="breadcrumb-wrapper gg-container">
+      <div class="breadcrumb-wrapper gg-container mt-50">
         {{ page.breadcrumb }}
       </div>
       {% endif %}

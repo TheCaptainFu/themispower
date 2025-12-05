@@ -1,0 +1,8 @@
+uuid: 378201e1-c19d-40c1-99c2-af59021887c8
+langcode: el
+status: true
+dependencies: {  }
+id: frontpage_top_image
+label: 'FrontPage Top Image'
+revision: false
+description: 'Μια εικόνα για την αρχική της σελίδας στο πανω μέρος.'
