@@ -78,7 +78,7 @@
 
   <div{{ content_attributes }}>
     <div class="mt-30 gg-container [&_img]:rounded-[15px]">
-      <div class="image relative">
+      <div class="image relative [&_img]:min-h-[250px] [&_img]:object-cover ">
         {% if node.field_eikona.0.entity.field_media_image.0.entity.uri.value %}
           {{ drupal_image(node.field_eikona.0.entity.field_media_image.0.entity.uri.value, "anakoinosi") }}
         {% endif %}
@@ -86,7 +86,7 @@
           {{ label }}
         </div>
       </div>
-      <div class="main-content grid grid-cols-[minmax(0,1fr)_300px] gap-30 mt-30">
+      <div class="main-content grid tab:grid-cols-[minmax(0,1fr)_300px] grid-cols-1 gap-30 mt-30">
         <div class="main-body">
           {{ content.body }}
         </div>

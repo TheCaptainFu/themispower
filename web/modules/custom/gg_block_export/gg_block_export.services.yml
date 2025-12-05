@@ -1,0 +1,7 @@
+services:
+  gg_block_export.commands:
+    class: Drupal\gg_block_export\Commands\BlockExportCommands
+    arguments: ['@entity_type.manager', '@file_system']
+    tags:
+      - { name: drush.command }
+

@@ -1,0 +1,6 @@
+
+                                                                     
+  There are no commands defined in the "gg_block_export" namespace.  
+                                                                     
+
+[31mFailed to run drush gg_block_export:export: exit status 1[0m

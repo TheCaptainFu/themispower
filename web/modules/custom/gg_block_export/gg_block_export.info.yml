@@ -1,0 +1,8 @@
+name: 'GG Block Export'
+type: module
+description: 'Export and import block content to sync blocks between environments'
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - drupal:block_content
+
