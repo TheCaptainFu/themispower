@@ -1,0 +1,61 @@
+uuid: 9d17eda2-051e-467b-97b3-e355ab5417a4
+langcode: el
+status: true
+dependencies:
+  config:
+    - block_content.type.frontpage_top_image
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - media.type.image
+    - node.type.anakoinosi
+    - node.type.proion
+    - taxonomy.vocabulary.katigoria
+  module:
+    - announcements_feed
+    - block
+    - block_content
+    - contextual
+    - filter
+    - media
+    - node
+    - system
+    - taxonomy
+    - toolbar
+id: editor
+label: Editor
+weight: 4
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access announcements'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access site in maintenance mode'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer blocks'
+  - 'administer filters'
+  - 'create anakoinosi content'
+  - 'create image media'
+  - 'create proion content'
+  - 'create terms in katigoria'
+  - 'delete any anakoinosi content'
+  - 'delete any image media'
+  - 'delete any proion content'
+  - 'delete own anakoinosi content'
+  - 'delete own image media'
+  - 'delete own proion content'
+  - 'delete terms in katigoria'
+  - 'edit any anakoinosi content'
+  - 'edit any frontpage_top_image block content'
+  - 'edit any image media'
+  - 'edit any proion content'
+  - 'edit own anakoinosi content'
+  - 'edit own image media'
+  - 'edit own proion content'
+  - 'edit terms in katigoria'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view the administration theme'

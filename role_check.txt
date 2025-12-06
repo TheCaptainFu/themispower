@@ -1,0 +1,4 @@
+anonymous: Ανώνυμος χρήστης
+authenticated: Πιστοποιημένος χρήστης
+content_editor: Content editor
+administrator: Διαχειριστής

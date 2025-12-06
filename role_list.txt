@@ -1,0 +1,10 @@
+
+                                            
+  Command "user:role:list" is not defined.  
+                                            
+  Did you mean one of these?                
+      user:role:add                         
+      user:role:remove                      
+                                            
+
+Failed to run drush user:role:list: exit status 1
