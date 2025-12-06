@@ -28,10 +28,10 @@
      {% if view.title %}
       <a href="/items" class="flex justify-between items-end mb-15 pb-15 border-b border-[#CCCED3]">
         <div class="title-wrapper flex items-end gap-10">
-          <span class="w-[7px] h-[32px] block bg-primary-blue"></span>
-          <h2 class="text-black text-xxxlarge leading-[36px] font-bold ">{{ view.title }}</h2>
+          <span class="w-[7px] desk:h-[32px] tab:h-[28px] h-[24px] block bg-primary-blue"></span>
+          <h2 class="text-black deks:text-xxxlarge desk:leading-[36px] tab:text-xxlarge tab:leading-[28px] text-xlarge leading-[24px] font-bold ">{{ view.title }}</h2>
         </div>
-        <p class="text-normal text-black font-bold hover:text-primary-blue transition duration-300">Περισσότερα</p>
+        <p class="desk:text-normal tab:text-small text-xsmall text-black font-bold hover:text-primary-blue transition duration-300">Περισσότερα</p>
       </a>
     {% endif %}
   {{ title_suffix }}

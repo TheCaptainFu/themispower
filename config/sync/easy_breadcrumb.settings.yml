@@ -5,7 +5,7 @@ applies_admin_routes: true
 include_invalid_paths: false
 excluded_paths: ''
 replaced_titles: ''
-custom_paths: ''
+custom_paths: '/node/*<none>'
 include_home_segment: true
 alternative_title_field: field_breadcrumb_title
 home_segment_title: Αρχική
@@ -45,3 +45,4 @@ truncator_length: 100
 truncator_dots: true
 remove_repeated_segments_text_only: false
 home_segment_validation_skip: false
+segments_disabled: '0'

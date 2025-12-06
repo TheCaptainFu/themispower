@@ -80,7 +80,7 @@
     </footer>
   {% endif %}
     <div{{ content_attributes.addClass('gg-container') }}>
-      <div class="wrapper grid desk:grid-cols-[auto_minmax(580px,580px)] gap-50">
+      <div class="wrapper grid wide:grid-cols-[minmax(0,1fr)_580px] grid-cols-1 gap-50">
         <div class="carousel">
 
           {# Main Carousel #}
@@ -113,11 +113,11 @@
           </div>
         </div>
         <div class="texts">
-          <div class="title text-xxxlarge mb-25 font-bold text-black bg-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] rounded-[15px] p-25">
+          <div class="title deks:text-xxxlarge tab:text-xxlarge text-xlarge mb-25 font-bold text-black bg-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] rounded-[15px] p-25">
             {{ label }}
           </div>
-          <div class="description bg-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] rounded-[15px] p-25 text-medium leading-medium text-black mb-50">
-            <p class="text-xlarge mb-25 font-bold text-black">Πληροφορίες</p>
+          <div class="description bg-white shadow-[0_4px_10px_rgba(0,0,0,0.1)] rounded-[15px] p-25 tab:text-medium text-small leading-medium text-black mb-50">
+            <p class="desk:text-xlarge tab:text-large text-normal mb-25 font-bold text-black">Πληροφορίες</p>
             {{ content.field_perigrafi }}
           </div>
         </div>
